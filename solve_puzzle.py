@@ -11,7 +11,7 @@ import requests
 LOGGER = logging.getLogger(__name__)
 
 
-def parse_args():
+def parse_args(): # pragma: no cover
     """
     Parse the command line args and options.
 
@@ -84,7 +84,7 @@ def solve_puzzle(url, ref):
     return response
 
 
-if __name__ == "__main__":
+if __name__ == "__main__": # pragma: no cover
     logging.basicConfig(level=logging.INFO)
     NS = parse_args()
     resp = solve_puzzle(NS.source, NS.ref) # pylint: disable=invalid-name
