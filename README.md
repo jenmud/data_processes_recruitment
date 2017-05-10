@@ -21,6 +21,8 @@ Installing setuptools, pip, wheel...done.
 
 ## Install dependencies
 
+_Note that the output of pip install may be different_
+
 ```bash
 $ /tmp/demo/bin/pip install -r requirement.txt 
 Collecting coverage==4.4 (from -r requirement.txt (line 1))
@@ -44,4 +46,18 @@ Collecting lazy-object-proxy (from astroid>=1.5.1->pylint==1.7.1->-r requirement
   Using cached lazy_object_proxy-1.3.1-cp35-cp35m-manylinux1_x86_64.whl
 Installing collected packages: coverage, lxml, nose, nose2, mccabe, isort, wrapt, lazy-object-proxy, astroid, pylint
 Successfully installed astroid-1.5.2 coverage-4.4 isort-4.2.5 lazy-object-proxy-1.3.1 lxml-3.7.3 mccabe-0.6.1 nose-1.3.7 nose2-0.6.5 pylint-1.7.1 wrapt-1.10.10
+```
+
+## Running the script
+
+You will need a job reference number which should have been provided to you.
+
+```bash
+$ /tmp/demo/bin/python solve_puzzle.py --ref ##### http://apply.dataprocessors.com.au/
+INFO:__main__:Response code: 200
+INFO:__main__:Response: <html>
+...
+...
+...
+</html> 
 ```
