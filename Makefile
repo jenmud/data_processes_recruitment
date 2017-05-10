@@ -6,7 +6,7 @@ test:
 
 
 cover: 
-	$(BIN)/nosetests --with-coverage --cover-erase --cover-package solve_puzzle
+	$(BIN)/nosetests --with-coverage --cover-erase --cover-branches  --cover-package solve_puzzle
 
 
 lint:
