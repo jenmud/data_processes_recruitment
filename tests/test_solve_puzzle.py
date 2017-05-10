@@ -1,7 +1,8 @@
 import lxml
 import os
 import unittest
-import solve_puzzle 
+import solve_puzzle
+import mock
 
 
 class TestOperations(unittest.TestCase):
@@ -25,3 +26,15 @@ class TestOperations(unittest.TestCase):
             49,
             solve_puzzle.count_filled_images(elem),
         )
+
+    @mock.patch("solve_puzzle.requests.post")
+    def test_solve_puzzle(self, mock_post):
+        solve_puzzle.solve_puzzle(self.html_filename, 1234)
+        mock_post.assert_called_once_with(
+            self.html_filename,
+            {
+                "jobref": 1234,
+                "valuee": 49,  # 49 filled in the sample data
+            }
+        )
+        
