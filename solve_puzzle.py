@@ -80,7 +80,7 @@ def solve_puzzle(url, ref):
         "jobref": ref,
         "valuee": total,
     }
-    response = requests.post(url, data)
+    response = requests.post(url, params=data)
     return response
 
 
