@@ -77,6 +77,7 @@ def solve_puzzle(url, ref):
     elem = parse_html(url)
     total = count_filled_images(elem)
     data = {
+        "title": "submit",
         "jobref": ref,
         "valuee": total,
     }

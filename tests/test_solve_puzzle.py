@@ -33,6 +33,7 @@ class TestOperations(unittest.TestCase):
         mock_post.assert_called_once_with(
             self.html_filename,
             params={
+                "title": "submit",
                 "jobref": 1234,
                 "valuee": 49,  # 49 filled in the sample data
             }
