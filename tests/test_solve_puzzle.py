@@ -32,7 +32,7 @@ class TestOperations(unittest.TestCase):
         solve_puzzle.solve_puzzle(self.html_filename, 1234)
         mock_post.assert_called_once_with(
             self.html_filename,
-            {
+            params={
                 "jobref": 1234,
                 "valuee": 49,  # 49 filled in the sample data
             }
